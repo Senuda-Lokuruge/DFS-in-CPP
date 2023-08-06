@@ -91,7 +91,7 @@ int main() {
    p.addNeighbour(&p);
 
    Node* root = &a;
-   Node* end = &h;
+   Node* end = &q;
 
    try {
       cout << traverse(root, end);
