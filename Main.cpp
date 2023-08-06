@@ -112,11 +112,13 @@ string traverse(Node* root, Node* end) {
 
    Node* currNode = root;
    traversalStack.push(currNode);
+   cout << "Traversal order: ";
 
    while (traversalStack.size() > 0) {
       currNode = traversalStack.top();
       traversalStack.pop();
 
+      cout << currNode->getName() << " ";
       if (currNode == end) {
         break;
       }
@@ -130,6 +132,7 @@ string traverse(Node* root, Node* end) {
          }
       }
    }
+   cout << endl;
 
    return tracePath(root, end);
 }
